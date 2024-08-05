@@ -1,4 +1,5 @@
 ﻿using WarriorGame.Models.Interfaces;
+using WarriorGame.Utilities;
 
 namespace WarriorGame.Models.Weapons
 {
@@ -9,7 +10,7 @@ namespace WarriorGame.Models.Weapons
 
         public void Attack()
         {
-            Console.WriteLine($"Attacks with the {Name} and deals {Damage} damage.");
+            WarriorConsole.DisplayWeaponAttack(this, $"Attacks with the {Name} {WarriorConsole.WeaponIcons[Name]} and deals {Damage} damage {WarriorConsole.DamageIcon}");
         }
     }
 }

@@ -1,11 +1,12 @@
-﻿
+﻿using Spectre.Console;
 using WarriorGame.Models.Interfaces;
+using WarriorGame.Utilities;
 
 namespace WarriorGame.Models
 {
     public class Warrior
     {
-        private string Name { get; }
+        public string Name { get; }
         public IWeapon Weapon { get; private set; }
 
         public Warrior(string name, IWeapon weapon)
@@ -16,14 +17,15 @@ namespace WarriorGame.Models
 
         public void Attack()
         {
-            Console.WriteLine($"Warrior {Name} attack with {Weapon.Name}.");
+            WarriorConsole.DisplayWarriorAttack(this, $"Warrior {Name} attack {WarriorConsole.AttackIcon}  with {Weapon.Name} {WarriorConsole.WeaponIcons[Weapon.Name]}");
             Weapon.Attack();
         }
 
         public void ChangeRandomWeapon(IWeapon newRandomWeapon)
         {
+            string oldWeaponName = Weapon.Name;
             Weapon = newRandomWeapon;
-            Console.WriteLine($"\nWarrior {Name} changed weapon to {Weapon.Name}.");
+            AnsiConsole.MarkupLine($"\n[bold]Weapon changed:[/] {WarriorConsole.WeaponIcons[oldWeaponName]} [strikethrough]{oldWeaponName}[/] -> {WarriorConsole.WeaponIcons[Weapon.Name]} [underline]{Weapon.Name}[/]");
         }
     }
 }
