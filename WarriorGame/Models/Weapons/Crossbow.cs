@@ -9,7 +9,7 @@ namespace WarriorGame.Models.Weapons
 
         public void Attack()
         {
-            Console.WriteLine($"Fires off the crossbow and deals {Damage} damage.");
+            Console.WriteLine($"Fires off the {Name} and deals {Damage} damage.");
         }
     }
 }

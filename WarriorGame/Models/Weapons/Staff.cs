@@ -9,7 +9,7 @@ namespace WarriorGame.Models.Weapons
 
         public void Attack()
         {
-            Console.WriteLine($"Hits with the staff and deals {Damage} damage.");
+            Console.WriteLine($"Hits with the {Name} and deals {Damage} damage.");
         }
     }
 }

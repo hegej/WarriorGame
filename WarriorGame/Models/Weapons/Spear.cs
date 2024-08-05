@@ -9,7 +9,7 @@ namespace WarriorGame.Models.Weapons
 
         public void Attack()
         {
-            Console.WriteLine($"Attacks with the spear and deals {Damage} damage.");
+            Console.WriteLine($"Attacks with the {Name} and deals {Damage} damage.");
         }
     }
 }

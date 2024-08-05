@@ -9,7 +9,7 @@ namespace WarriorGame.Models.Weapons
 
         public void Attack()
         {
-            Console.WriteLine($"Stabs with the dagger and deals {Damage} damage.");
+            Console.WriteLine($"Stabs with the {Name} and deals {Damage} damage.");
         }
     }
 }

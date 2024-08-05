@@ -9,7 +9,7 @@ namespace WarriorGame.Models.Weapons
 
         public void Attack()
         {
-            Console.WriteLine($"Swings the axe and deals {Damage} damage.");
+            Console.WriteLine($"Swings the {Name} and deals {Damage} damage.");
         }
     }
 }

@@ -9,7 +9,7 @@ namespace WarriorGame.Models.Weapons
 
         public void Attack()
         {
-            Console.WriteLine($"Fires an arrow and deals {Damage} damage.");
+            Console.WriteLine($"Fires an arrow with the {Name} and deals {Damage} damage.");
         }
     }
 }
