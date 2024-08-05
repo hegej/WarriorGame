@@ -2,14 +2,14 @@
 
 namespace WarriorGame.Models.Weapons
 {
-    public class Halbred : IWeapon
+    public class Halberd : IWeapon
     {
-        public string Name { get; set; } = "Halbred";
+        public string Name { get; set; } = "Halberd";
         public int Damage { get; set; } = 12;
 
         public void Attack()
         {
-            Console.WriteLine($"Swings the halbred and deals {Damage} damage.");
+            Console.WriteLine($"Swings the Halberd and deals {Damage} damage.");
         }
     }
 }

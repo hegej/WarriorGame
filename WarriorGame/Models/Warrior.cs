@@ -6,7 +6,7 @@ namespace WarriorGame.Models
     public class Warrior
     {
         public string Name { get; }
-        public IWeapon Weapon { get; }
+        public IWeapon Weapon { get; private set; }
 
         public Warrior(string name, IWeapon weapon)
         {
@@ -18,6 +18,12 @@ namespace WarriorGame.Models
         {
             Console.WriteLine($"Warrior {Name} attack with {Weapon.Name}.");
             Weapon.Attack();
+        }
+
+        public void ChangeRandomWeapon(IWeapon newRandomWeapon)
+        {
+            Weapon = newRandomWeapon;
+            Console.WriteLine($"\nWarrior {Name} changed weapon to {Weapon.Name}.");
         }
     }
 }
