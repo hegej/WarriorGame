@@ -5,7 +5,7 @@ namespace WarriorGame.Models
 {
     public class Warrior
     {
-        public string Name { get; }
+        private string Name { get; }
         public IWeapon Weapon { get; private set; }
 
         public Warrior(string name, IWeapon weapon)

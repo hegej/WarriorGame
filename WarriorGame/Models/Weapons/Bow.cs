@@ -4,8 +4,8 @@ namespace WarriorGame.Models.Weapons
 {
     public class Bow : IWeapon
     {
-        public string Name { get; set; } = "Bow";
-        public int Damage { get; set; } = 8;
+        public string Name { get; private set; } = "Bow";
+        private int Damage { get; set; } = 8;
 
         public void Attack()
         {

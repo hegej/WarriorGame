@@ -1,6 +1,8 @@
-﻿using WarriorGame.Models;
+﻿using Spectre.Console;
+using WarriorGame.Models;
 using WarriorGame.Models.Interfaces;
 using WarriorGame.Models.Weapons;
+
 
 List<IWeapon> weapons = new List<IWeapon>
 {

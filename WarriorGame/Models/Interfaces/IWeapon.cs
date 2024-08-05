@@ -3,8 +3,7 @@ namespace WarriorGame.Models.Interfaces
 {
     public interface IWeapon
     {
-        string Name { get; set; }
-        int Damage { get; set; }
+        string Name { get; }
         void Attack();
     }
 }
