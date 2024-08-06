@@ -6,7 +6,7 @@ namespace WarriorGame.Models.Weapons
     public class Axe : IWeapon
     {
         public string Name { get; private set; } = "Axe";
-        private int Damage { get; set; } = 15;
+        private int Damage { get; set; } = 13;
 
         public void Attack()
         {
